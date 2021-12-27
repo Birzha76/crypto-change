@@ -3147,12 +3147,17 @@ textarea:focus {
   position: relative;
   z-index: 30;
 }
+@media only screen and (max-width:767px) {
+  .currency-calculator .calculator-first-part {
+    width: 100%;
+  }
+}
 .currency-calculator .calculator-first-part form {
   position: relative;
   z-index: 10;
 }
 .currency-calculator .calculator-first-part input {
-  width: 85px;
+  width: 285px;
   height: 53px;
   border: 2px solid #ffaf02;
   border-radius: 0;
@@ -3166,11 +3171,14 @@ textarea:focus {
 }
 @media only screen and (max-width:767px) {
   .currency-calculator .calculator-first-part input {
-    width: 60px;
+    width: 100%;
     font-size: 14px;
     height: 40px;
     margin-right: 8px;
   }
+}
+.currency-calculator .calculator-first-part .is-invalid {
+  border: 2px solid red;
 }
 .currency-calculator .calculator-first-part select {
   position: relative;

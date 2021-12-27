@@ -778,12 +778,15 @@ textarea:focus {
     .calculator-first-part {
         position: relative;
         z-index: 30;
+        @media #{$breakpoint-xs} {
+            width: 100%;
+        }
         form {
             position: relative;
             z-index: 10;
         }
         input {
-            width: 85px;
+            width: 285px;
             height: 53px;
             border: 2px solid $hover-color;
             border-radius: 0;
@@ -795,12 +798,17 @@ textarea:focus {
             font-weight: 600;
             font-size: 18px;
             @media #{$breakpoint-xs} {
-                width: 60px;
+                width: 100%;
                 font-size: 14px;
                 height: 40px;
                 margin-right: 8px;
             }
         }
+
+        .is-invalid {
+            border: 2px solid red;
+        }
+
         select {
             position: relative;
             z-index: 10;
